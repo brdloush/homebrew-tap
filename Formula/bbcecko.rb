@@ -1,8 +1,8 @@
 class Bbcecko < Formula
   desc "Simple, friendly C++ editor for students: highlight, Run, readable errors"
   homepage "https://github.com/brdloush/bbcecko"
-  url "https://github.com/brdloush/bbcecko/releases/download/v0.1.0/bbcecko-0.1.0.jar"
-  sha256 "e3e8f20f0602066801994213945f828df03f03b8198bcab41b243f7c314561e6"
+  url "https://github.com/brdloush/bbcecko/releases/download/v0.1.1/bbcecko-0.1.1.jar"
+  sha256 "d02f7a49fb20a14dbaf18e139c5b117b7155c46f8d136c9fd6bf2f454c8e8f5b"
   license "MIT"
 
   depends_on "adwaita-icon-theme"

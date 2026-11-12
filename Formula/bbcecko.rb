@@ -1,10 +1,9 @@
 class Bbcecko < Formula
   desc "Simple, friendly C++ editor for students: highlight, Run, readable errors"
   homepage "https://github.com/brdloush/bbcecko"
-  url "https://github.com/brdloush/bbcecko/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "3396a7179df1afa33d30791064c4dc3610e1860a06b03164118931dbb89b0193"
+  url "https://github.com/brdloush/bbcecko/releases/download/v0.1.0/bbcecko-0.1.0.jar"
+  sha256 "e3e8f20f0602066801994213945f828df03f03b8198bcab41b243f7c314561e6"
   license "MIT"
-  head "https://github.com/brdloush/bbcecko.git", branch: "main"
 
   depends_on "adwaita-icon-theme"
   depends_on "gtk4"
@@ -40,8 +39,7 @@ class Bbcecko < Formula
     resource("babashka").stage { (libexec/"bin").install "bb" }
     bb = libexec/"bin/bb"
     # one jar with the app, gtkiccup and Replicant: nothing to fetch at run time
-    system bb, "--config", "bb.edn", "uberjar", "bbcecko.jar", "-m", "bbcecko.main"
-    libexec.install "bbcecko.jar"
+    libexec.install "bbcecko-#{version}.jar" => "bbcecko.jar"
     (bin/"bbcecko").write <<~SH
       #!/bin/bash
       # Started from a terminal with no argument: the current folder is the root.
